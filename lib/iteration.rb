@@ -6,13 +6,16 @@ def join_ingredients(src)
   #
   # "I love (inner array element 0) and (inner array element 1) on my pizza""
   # As such, there should be a new String for each inner array, or pair
+  result = []
+
   i = 0
   while i < src.length do
     inner = src[i]
     result << "I love #{inner[0]} and #{inner[1]} on my pizza"
     i += 1
-end
-result
+  end
+
+  result
 end
 
 def find_greater_pair(src)
@@ -21,12 +24,13 @@ def find_greater_pair(src)
   # that are in the inner Arrays
   result = []
 
-i = 0
-while i < src.length do
-  result <<  (src[i][0] > src[i][1] ? src[i][0] : src[i][1])
-  i += 1
-end
-result
+  i = 0
+  while i < src.length do
+    result <<  (src[i][0] > src[i][1] ? src[i][0] : src[i][1])
+    i += 1
+  end
+
+  result
 end
 
 def total_even_pairs(src)
@@ -37,6 +41,7 @@ def total_even_pairs(src)
   # As a reminder any number % 2 will return 0 or 1. If the result is 0, then
   # the number was even. Review the operator documentation if you've forgotten
   # this!
+
   total = 0
   i = 0
   while i < src.length do
